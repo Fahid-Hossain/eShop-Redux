@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# eShop Ecoomerce site using Redux and React Router v6
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+live-site: https://eshop-redux.web.app/
+
+## Using Tools
+* Redux for state management
+* React router version 6
+* MongoDB Atlas database
+* Bootstrap5
+
+## Features
+* user can see products
+* products details can be known by user
+* user can add a product by his own
+
 
 ## Available Scripts
 
