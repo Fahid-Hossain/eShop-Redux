@@ -1,8 +1,9 @@
 import React,{useEffect} from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import Header from './Header';
-import ProductComponent from './ProductComponent';
 import axios from 'axios';
+import ProductComponent from './ProductComponent';
+import Footer from './Footer';
 import {setProducts} from '../redux/actions/productActions';
 
 const ProductListing = () => {
@@ -12,7 +13,7 @@ const ProductListing = () => {
 
     //load data using axios
     const fetchProducts = async()=>{
-        const response = await axios.get("http://localhost:5000/products")
+        const response = await axios.get("https://stark-thicket-87413.herokuapp.com/products")
         .catch((error)=>{
             console.log("error",error);
         })
@@ -30,6 +31,7 @@ const ProductListing = () => {
         <>
             <Header></Header>
             <ProductComponent></ProductComponent>
+            <Footer></Footer>
         </>
     );
 };

@@ -11,7 +11,7 @@ const ProductDetail = () => {
     // console.log(productId);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId._id}`)
+        fetch(`https://stark-thicket-87413.herokuapp.com/products/${productId._id}`)
             .then(res => res.json())
             .then(data => {
                 dispatch(selectedProduct(data));
@@ -38,7 +38,8 @@ const ProductDetail = () => {
                         <Card.Text>
                             {description}
                         </Card.Text>
-                        <Link to="/productListing"><Button variant="primary">Go back ProductList</Button></Link>
+                        <Link to="/productListing"><Button variant="success">Go back ProductList</Button></Link>
+                        <Button variant="outline-primary mx-2">Purchase</Button>{' '}
                     </Card.Body>
                 </Card>
             </div>}

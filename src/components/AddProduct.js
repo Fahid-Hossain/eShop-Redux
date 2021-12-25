@@ -3,11 +3,12 @@ import Header from './Header';
 import { useForm } from "react-hook-form";
 import "./AddProduct.css"
 import axios from 'axios';
+import Footer from './Footer';
 
 const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
-        axios.post("http://localhost:5000/products",data)
+        axios.post("https://stark-thicket-87413.herokuapp.com/products",data)
         .then(res=>{
             if(res.data.insertedId){
                 alert("Product Added successfully!");
@@ -18,7 +19,7 @@ const AddProduct = () => {
     return (
         <div className="add-service">
             <Header></Header>
-            <h1>Add Your Product</h1>
+            <h2 className="mt-5 text-primary">Add Your Product</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title")} placeholder="Product-Name"/>
                 <textarea {...register("description")} placeholder="description" />
@@ -27,6 +28,7 @@ const AddProduct = () => {
                 <input {...register("image")} placeholder="image-url"/>
                 <input type="submit" />
             </form>
+            <Footer></Footer>
         </div>
     );
 };

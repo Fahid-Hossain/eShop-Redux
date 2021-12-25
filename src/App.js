@@ -6,13 +6,14 @@ import ProductListing from './components/ProductListing';
 import PageNotFound from './components/PageNotFound';
 import ProductDetail from './components/ProductDetail';
 import AddProduct from './components/AddProduct';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Header/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/productListing" element={<ProductListing/>} />
         <Route path="/addProduct" element={<AddProduct/>} />
         <Route path="/productListing/product/:_id" element={<ProductDetail/>} />
