@@ -12,7 +12,7 @@ const ProductListing = () => {
 
     //load data using axios
     const fetchProducts = async()=>{
-        const response = await axios.get("https://fakestoreapi.com/products")
+        const response = await axios.get("http://localhost:5000/products")
         .catch((error)=>{
             console.log("error",error);
         })

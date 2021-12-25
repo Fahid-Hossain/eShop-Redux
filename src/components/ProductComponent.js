@@ -20,7 +20,7 @@ const ProductComponent = () => {
                                     {product.category}
                                 </Card.Text>
                             </Card.Body>
-                            <Link to={`product/${product.id}`}>
+                            <Link to={`product/${product._id}`}>
                             <Button variant="outline-secondary">Details</Button>{' '}
                             </Link>
                         </Card>

@@ -11,7 +11,7 @@ const ProductDetail = () => {
     // console.log(productId);
 
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${productId.id}`)
+        fetch(`http://localhost:5000/products/${productId._id}`)
             .then(res => res.json())
             .then(data => {
                 dispatch(selectedProduct(data));
@@ -20,7 +20,7 @@ const ProductDetail = () => {
         return () => {
             dispatch(removeSelectedProduct());
         }
-    }, [productId.id])
+    }, [productId._id])
 
 
     // selected products 
